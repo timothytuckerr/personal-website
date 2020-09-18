@@ -1,0 +1,27 @@
+html * {
+  font-family: 'Poppins', sans-serif
+}
+
+.intro {
+  font-weight: 800;
+  font-size: 280%;
+}
+
+.bio {
+  font-weight: 500;
+  font-size: large;
+}
+
+.title {
+  font-weight: 700;
+  font-size: xx-large;
+}
+
+.sub-title {
+  font-weight: 400;
+  font-size: large;
+}
+
+.paragraph {
+  font-weight: 300;
+}
