@@ -25,3 +25,11 @@ html * {
 .paragraph {
   font-weight: 300;
 }
+
+.colored {
+  color: #DE6868;
+}
+
+.faded {
+    opacity: 0.75;
+}
