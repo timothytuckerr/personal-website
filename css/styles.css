@@ -31,5 +31,9 @@ html * {
 }
 
 .faded {
-    opacity: 0.75;
+  opacity: 0.6;
+}
+
+.black-text {
+  color: black;
 }
