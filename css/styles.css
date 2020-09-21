@@ -14,12 +14,12 @@ html * {
 
 .title {
   font-weight: 700;
-  font-size: xx-large;
+  font-size: 250%;
 }
 
 .sub-title {
-  font-weight: 400;
-  font-size: large;
+  font-weight: 600;
+  font-size: x-large;
 }
 
 .paragraph {
