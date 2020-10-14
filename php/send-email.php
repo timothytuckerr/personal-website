@@ -1,7 +1,9 @@
 <?php
-  if (isset($_POST['action'])) {
-    send_email();
-  }
+
+  $form_data = $_POST['form_data']
+  $decoded = json_decode($form_data, true);
+
+  var_dump($decoded)
 
   function send_email() {
     $to = "timothytucker@berkeley.edu";
