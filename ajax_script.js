@@ -9,7 +9,7 @@ $(document).ready(function() {
     const form_data_str = JSON.stringify(form_data);
     $.ajax({
       url: 'php/send-email.php',
-      type: 'post',
+      type: "POST",
       data: {form_data: form_data_str},
       success: function(response) {
         console.log(response);
