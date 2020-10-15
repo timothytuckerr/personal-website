@@ -1,19 +1,18 @@
 <?php
 
-  $form_data = $_POST['form_data']
-  $decoded = json_decode($form_data, true);
-  send_email($decoded);
+if (isset($_POST['submit'])) {
+  $name = $_POST['name'];
+  $mail_from = $_POST['email'];
+  $user_subject = $_POST['subject'];
+  $message = $_POST['message'];
 
-  function send_email($decoded) {
-    $to = "timothytucker@berkeley.edu";
-    $subject = $decoded['subject'] . " - " . $decoded['name'];
-    $message = $decoded['message'];
+  $mail_to = "timothytucker@berkeley.edu";
+  $email_subject = "WEBSITE CONTACT - " . $name;
+  $headers = "From: " . $mail_from;
+  $email_text = "Email from: " . $name . "\nSubject: " . $user_subject . "\n\n" . $message;
 
-    $headers = "MIME-Version: 1.0" . "\r\n";
-    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-    $headers .= "From: " . $decoded['email'] . "\r\n";
-
-    mail($to, $subject, $message, $headers);
-  }
+  mail($mail_to, $email_subject, $email_text, $headers);
+  header("Location: index.html?mailsend");
+}
 
 ?>

@@ -18,7 +18,7 @@
   <!--
   <form class="p-4" action="php/send-email.php" method="post">
   -->
-  <form class="p-4">
+  <form action="php/send-email.php" method="post" class="contact-form p-4">
     Name: <input type="text" name="name" id="user_name">
     <br>
     E-Mail: <input type="text" name="email" id="user_email">
@@ -29,10 +29,8 @@
     <br>
     <textarea name="message" id="user_message" cols="31" rows="10"></textarea>
     <br>
-    <input class="submit-button" type="submit">
+    <input name="submit" type="submit">
   </form>
-
-  <script src=ajax_script.js></script>
 
 </body>
 
