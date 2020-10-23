@@ -11,26 +11,25 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   <link href="img/logo.png" rel="icon" type="image/x-icon" />
-  <title>Contact</title>
+  <title>Contact - Timothy Tucker</title>
 </head>
 
-<body>
-  <!--
-  <form class="p-4" action="php/send-email.php" method="post">
-  -->
-  <form action="php/send-email.php" method="post" class="contact-form p-4">
-    Name: <input type="text" name="name" id="user_name">
-    <br>
-    E-Mail: <input type="text" name="email" id="user_email">
-    <br>
-    Subject: <input type="text" name="subject" id="user_subject">
-    <br>
-    Message:
-    <br>
-    <textarea name="message" id="user_message" cols="31" rows="10"></textarea>
-    <br>
-    <input name="submit" type="submit">
-  </form>
+<body class="h-100">
+
+<div class="container h-100" id="contact-page">
+  <div class="row p-4 align-items-center justify-content-center h-100">
+    <div class="col-md my-auto">
+      <p class="title colored pl-4 pt-4">Contact Me</p>
+      <form action="php/send-email.php" method="post" class="contact-form pr-4 pl-4">
+        <input class="form-control form-control-lg" type="text" name="name" id="user_name" placeholder="Your Name"> <br>
+        <input class="form-control form-control-lg" type="text" name="email" id="user_email" placeholder="Your Email"> <br>
+        <input class="form-control form-control-lg" type="text" name="subject" id="user_subject" placeholder="Subject"> <br>
+        <textarea class="form-control form-control-lg" name="message" id="user_message" placeholder="Message" cols="40" rows="10"></textarea> <br>
+        <input class="btn-lg btn-dark black-text faded" name="submit" type="submit">
+      </form>
+    </div>
+  </div>
+</div>
 
 </body>
 
