@@ -1,0 +1,72 @@
+@-webkit-keyframes bobble {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1rem);
+  }
+}
+@keyframes bobble {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1rem);
+  }
+}
+
+html * {
+  font-family: 'Poppins', sans-serif
+}
+
+#main {
+	background-color: #f0fff6;
+	background-image: url(../img/blue-snow.png);
+	background position: center;
+  display: none;
+	height: 4000px;
+}
+
+.bg-logo {
+	background-image: url(../img/logo.png);
+	background-size: 35%;
+	background-position: center 10em;
+	background-repeat: no-repeat;
+	color: #FFF;
+}
+
+#head.spacer {
+	height: 800px;
+}
+
+.down-arrow {
+	display: flex;
+	justify-content: center;
+}
+
+.down-indicator {
+	width: 2em;
+	height: auto;
+  animation: bobble 1s infinite alternate;
+	opacity: 100%
+}
+
+#video-gallery {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: transparent;
+	margin-top: 15em;
+}
+
+#gallery-wrapper .row {
+	padding: 1em;
+}
+
+.thumbnail {
+	height: 300px;
+	width: auto;
+}
+
+.thumbnail:hover {
+	cursor: pointer;
+}
