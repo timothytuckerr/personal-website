@@ -15,14 +15,21 @@
   }
 }
 
+* {
+  transition: all ease-in-out 250ms;
+}
+
 html * {
   font-family: 'Poppins', sans-serif
+  scroll-behavior: smooth;
 }
 
 #main {
 	background-color: #f0fff6;
 	background-image: url(../img/blue-snow.png);
-	background position: center;
+	background-position: center;
+  background-repeat: repeat;
+  background-blend-mode: multiply;
   display: none;
 	height: 4000px;
 }
@@ -48,14 +55,14 @@ html * {
 	width: 2em;
 	height: auto;
   animation: bobble 1s infinite alternate;
-	opacity: 100%
+	opacity: 100%;
 }
 
 #video-gallery {
 	display: flex;
 	flex-wrap: wrap;
 	background-color: transparent;
-	margin-top: 15em;
+	margin-top: 20em;
 }
 
 #gallery-wrapper .row {
@@ -69,4 +76,9 @@ html * {
 
 .thumbnail:hover {
 	cursor: pointer;
+}
+
+.parallax-bg,
+.parallax-bg-main {
+  transition: none;
 }
