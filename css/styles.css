@@ -3,6 +3,11 @@ html * {
 }
 
 #main {
+
+	background-image: url(../img/lightpaperfibers.png);
+	background-position: center;
+  background-repeat: repeat;
+  background-blend-mode: multiply;
   display: none;
 }
 
