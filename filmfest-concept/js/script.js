@@ -22,7 +22,7 @@ function parallax() {
 	$('.parallax-bg-main').css('background-position', 'center ' + (10 - (wScroll * 0.0002)) + 'em');
 }
 
-/* animation: bobble 1s infinite alternate; */
+/* animation: bobble 5s infinite (delay) alternate; */
 function randomEffect() {
   thumbnailArray = $('.thumbnail');
   thumbnailArray.each(function(index) {
