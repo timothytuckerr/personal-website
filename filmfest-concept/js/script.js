@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $('#main').fadeIn(1500);
-  randomEffect();
+  // randomEffect();
 })
 
 $(document).on('click', 'a[href^="#"]', function (event) {
