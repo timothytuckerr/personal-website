@@ -54,8 +54,8 @@ body {
 }
 
 #main {
-	background-color: #f0fff6;
-	background-image: url(../img/blue-snow.png);
+	background-color: #ffffed;
+	background-image: url(../img/lightpaperfibers.png);
 	background-position: center;
   background-repeat: repeat;
   background-blend-mode: multiply;
@@ -99,15 +99,38 @@ body {
 	padding: 1em;
 }
 
+.film-title #title {
+  font-weight: 500;
+  font-size: 6em;
+  color: #3b3a38;
+  filter: drop-shadow(.05em .05em 0px #ffffed);
+}
+
+.film-title {
+    margin-top: 3em;
+    pointer-events: none;
+}
+
+.film-title, #left {
+  margin-left: -15em;
+  justify-content: flex-start;
+}
+.film-title, #right {
+  margin-right: -15em;
+  justify-content: flex-end;
+}
+
 .thumbnail {
-	height: 300px;
+	height: 400px;
 	width: auto;
   transition: all .2s ease-in-out;
+  padding-bottom: 2em;
 }
 
 .thumbnail:hover {
 	cursor: pointer;
-  transform: scale(1.1);
+  transform: scale(0.95);
+
 }
 
 .parallax-bg,
