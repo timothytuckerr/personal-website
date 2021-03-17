@@ -54,8 +54,8 @@ body {
 }
 
 #main {
-	background-color: #ffffed;
-	background-image: url(../img/lightpaperfibers.png);
+	background-color: #f0d8dd;
+	/* background-image: url(../img/lightpaperfibers.png); */
 	background-position: center;
   background-repeat: repeat;
   background-blend-mode: multiply;
@@ -64,9 +64,9 @@ body {
 }
 
 .bg-logo {
-	background-image: url(../img/logo.png);
-	background-size: 20%;
-	background-position: center 10em;
+	background-image: url(../img/logo2.png);
+	background-size: 50%;
+	background-position: center 5em;
 	background-repeat: no-repeat;
 	color: #FFF;
 }
@@ -81,7 +81,7 @@ body {
 }
 
 .down-indicator {
-	width: 2em;
+	width: 1.25em;
 	height: auto;
   animation: bobble 1s infinite alternate;
 	opacity: 100%;
@@ -89,42 +89,59 @@ body {
 }
 
 #video-gallery {
+  transition: none;
+  background-image: url(../img/video-gallery.png);
+  background-size: 45%;
+	background-position: center 5em;
+	background-repeat: no-repeat;
+
 	display: flex;
 	flex-wrap: wrap;
-	background-color: transparent;
-	margin-top: 20em;
+	background-color: #f0d8dd;
+	margin: 15em 1em 0 2em;
+  padding-top: 5em;
+  border-top: 0.1em solid black;
+}
+
+.gallery-title {
+  font-weight: 300;
+  font-size: 12em;
+  color: black;
+}
+
+.gallery-head {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+#gallery-wrapper {
+  padding-top: 40em;
 }
 
 #gallery-wrapper .row {
 	padding: 1em;
 }
 
-.film-title #title {
-  font-weight: 500;
-  font-size: 6em;
-  color: #3b3a38;
-  filter: drop-shadow(.05em .05em 0px #ffffed);
+.video-box {
+  position: relative;
+  display: inline-block;
 }
 
-.film-title {
-    margin-top: 3em;
-    pointer-events: none;
-}
-
-.film-title, #left {
-  margin-left: -15em;
-  justify-content: flex-start;
-}
-.film-title, #right {
-  margin-right: -15em;
-  justify-content: flex-end;
+.film-title, #title {
+  font-weight: 100;
+  font-size: 2em;
+  color: black;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 0.05em solid black;
+  background-color: #f0d8dd;
 }
 
 .thumbnail {
 	height: 400px;
 	width: auto;
   transition: all .2s ease-in-out;
-  padding-bottom: 2em;
 }
 
 .thumbnail:hover {

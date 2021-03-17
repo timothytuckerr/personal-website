@@ -17,9 +17,13 @@ $(window).scroll(function() {
 
 function parallax() {
 	var wScroll = $(window).scrollTop();
-	$('.down-indicator').css('opacity', (100 - (wScroll * 0.5)) + '%');
-	$('.parallax-bg').css('background-position', 'center ' + (10 + (wScroll * 0.05)) + 'em');
-	$('.parallax-bg-main').css('background-position', 'center ' + (10 - (wScroll * 0.0002)) + 'em');
+  var topGallery = $('#video-gallery').offset().top;
+  console.log(topGallery);
+	$('.down-indicator').css('opacity', (100 - (wScroll)) + '%');
+	$('.parallax-bg').css('background-position', 'center ' + (5 + (wScroll * 0.05)) + 'em');
+  if (wScroll >= topGallery) {
+    $('.parallax-bg-gallery').css('background-position', 'center ' + (5 + ((wScroll - topGallery) * 0.08)) + 'em');
+  }
 }
 
 /* animation: bobble 5s infinite (delay) alternate; */
