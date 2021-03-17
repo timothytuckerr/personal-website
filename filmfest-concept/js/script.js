@@ -22,7 +22,7 @@ function parallax() {
 	$('.down-indicator').css('opacity', (100 - (wScroll)) + '%');
 	$('.parallax-bg').css('background-position', 'center ' + (5 + (wScroll * 0.05)) + 'em');
   if (wScroll >= topGallery) {
-    $('.parallax-bg-gallery').css('background-position', 'center ' + (5 + ((wScroll - topGallery) * 0.08)) + 'em');
+    $('.parallax-bg-gallery').css('background-position', 'center ' + (5 + ((wScroll - topGallery) * 0.1)) + 'em');
   }
 }
 
