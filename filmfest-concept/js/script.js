@@ -15,6 +15,36 @@ $(window).scroll(function() {
 	parallax();
 })
 
+$(".video-box").hover(
+  function() {
+    var id = this.id;
+    var imgSelector = "#" + id + " img";
+    var videoSelector = "#" + id + " video";
+    var imgHeight = $(imgSelector).height();
+    var imgWidth = $(imgSelector).width();
+    $(videoSelector).css('height', imgHeight + 'px');
+    $(videoSelector).css('width', imgWidth + 'px');
+    $(imgSelector).css('display', 'none');
+    $(videoSelector).css('display', 'block');
+  }, function() {
+    var id = this.id;
+    $("#" + id + " video").css('display', 'none');
+    $("#" + id + " img").css('display', 'block');
+  }
+);
+
+$(".video-box").click(function() {
+  openTheater();
+});
+
+function openTheater() {
+  document.getElementById("theater").style.display = "block";
+}
+
+function closeTheater() {
+  document.getElementById("theater").style.display = "none";
+}
+
 function parallax() {
 	var wScroll = $(window).scrollTop();
   var topGallery = $('#video-gallery').offset().top;
