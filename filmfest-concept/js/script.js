@@ -54,15 +54,10 @@ $(".outer").click(function() {
 
 function loadContent(contentID) {
   var filmContent = theaterContent[contentID];
-  var aboutTitle = "About the creator";
-  if (filmContent["multiple-creators"] == false) {
-    aboutTitle += "s";
-  }
   $("#theater-content.video-embed").attr('src', filmContent["source"]);
   $(".theater.title").text(filmContent["title"]);
   $(".theater.creator").text(filmContent["creator"]);
   $(".theater.description").text(filmContent["description"]);
-  $(".theater.about").text(aboutTitle);
   $(".theater.bio").text(filmContent["bio"]);
 }
 
