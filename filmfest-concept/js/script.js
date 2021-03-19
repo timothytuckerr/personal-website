@@ -34,15 +34,32 @@ $(".video-box").hover(
 );
 
 $(".video-box").click(function() {
-  openTheater();
+  var id = this.id;
+  openTheater(id);
 });
 
-function openTheater() {
+var lastOpened = "";
+
+$(".outer").click(function() {
+  changeVisibility(lastOpened);
+  lastOpened = "";
+  closeTheater();
+})
+
+function openTheater(id) {
   document.getElementById("theater").style.display = "block";
+  changeVisibility(id);
+  lastOpened = id;
+//  $("#" + id).css('display', 'block');
 }
 
 function closeTheater() {
   document.getElementById("theater").style.display = "none";
+}
+
+function changeVisibility(id) {
+  $("#" + id).toggleClass('invisible');
+  $("#" + id).toggleClass('visible');
 }
 
 function parallax() {

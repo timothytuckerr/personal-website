@@ -86,10 +86,16 @@ body {
   animation: bobble 1s infinite alternate;
 	opacity: 100%;
   transition: initial;
+  color: #0A4EF2/*black*/;
+}
+
+.filter-match {
+  filter: invert(19%) sepia(59%) saturate(6868%) hue-rotate(226deg) brightness(97%) contrast(96%);
 }
 
 #theater {
   position: fixed;
+  overflow-y: scroll;
   display: none;
   width: 100%;
   height: auto;
@@ -97,18 +103,106 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.8);
   z-index: 2;
 }
+
+#theater .row {
+  width: 100%;
+}
+
+/* close button */
+.outer {
+  position: relative;
+  width: 70px;
+  cursor: pointer;
+  left: 7.5em;
+  right: 0;
+  top: 5em;
+  bottom: 0;
+}
+
+.inner {
+  width: inherit;
+  text-align: center;
+}
+
+label {
+  font-size: .8em;
+  line-height: 4em;
+  text-transform: uppercase;
+  color: #f0d8dd;
+  transition: all .3s ease-in;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.inner:before, .inner:after {
+  position: absolute;
+  content: '';
+  height: 1px;
+  width: inherit;
+  background: #f0d8dd;
+  left: 0;
+  transition: all .3s ease-in;
+}
+
+.inner:before {
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+.inner:after {
+  bottom: 50%;
+  transform: rotate(-45deg);
+}
+
+.outer:hover label {
+  opacity: 1;
+}
+
+.outer:hover .inner:before,
+.outer:hover .inner:after {
+  transform: rotate(0);
+}
+
+.outer:hover .inner:before {
+  top: 0;
+}
+
+.outer:hover .inner:after {
+  bottom: 0;
+}
+
+/* end close button */
 
 .video-embed {
   height: 650px;
   width: 100%;
 }
 
+.theater {
+  color: #f0d8dd;
+}
+
+.theater.title {
+  font-weight: 700;
+  font-size: 3em;
+}
+
+.theater.creator {
+  font-weight: 500;
+  font-size: 2em;
+}
+
+.theater.description {
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
 #video-gallery {
   transition: none;
-  background-image: url(../img/video-gallery.png);
+  background-image: url(../img/video-gallery-blue.png);
   background-size: 45%;
 	background-position: center 5em;
 	background-repeat: no-repeat;
@@ -118,13 +212,13 @@ body {
 	background-color: #f0d8dd;
 	margin: 15em 1em 0 2em;
   padding-top: 5em;
-  border-top: 0.1em solid black;
+  border-top: 0.1em solid #0A4EF2/*black*/;
 }
 
 .gallery-title {
   font-weight: 300;
   font-size: 12em;
-  color: black;
+  color: #0A4EF2/*black*/;
 }
 
 .gallery-head {
@@ -149,10 +243,10 @@ body {
 .film-title, #title {
   font-weight: 100;
   font-size: 2em;
-  color: black;
+  color: #0A4EF2/*black*/;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  border-bottom: 0.05em solid black;
+  border-bottom: 0.05em solid #0A4EF2/*black*/;
   background-color: #f0d8dd;
 }
 
