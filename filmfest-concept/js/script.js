@@ -58,6 +58,7 @@ function loadContent(contentID) {
   if (filmContent["multiple-creators"]) {
     aboutTitle += "s";
   }
+  $("#theater-content.video-embed").attr('src', filmContent["source"]);
   $(".theater.title").text(filmContent["title"]);
   $(".theater.creator").text(filmContent["creator"]);
   $(".theater.description").text(filmContent["description"]);
