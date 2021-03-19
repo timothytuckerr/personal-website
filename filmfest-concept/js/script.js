@@ -55,7 +55,7 @@ $(".outer").click(function() {
 function loadContent(contentID) {
   var filmContent = theaterContent[contentID];
   var aboutTitle = "About the creator";
-  if (filmContent["multiple-creators"]) {
+  if (filmContent["multiple-creators"] == false) {
     aboutTitle += "s";
   }
   $("#theater-content.video-embed").attr('src', filmContent["source"]);
