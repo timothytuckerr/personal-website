@@ -1,7 +1,17 @@
+var theaterContent = {};
+
 $(document).ready(function() {
   $('#main').fadeIn(1500);
   // randomEffect();
-})
+  $.getJSON("js/theater-content.json", function(content) {
+    saveContent(content);
+  });
+});
+
+function saveContent(content) {
+  theaterContent = content;
+  console.log(theaterContent);
+}
 
 $(document).on('click', 'a[href^="#"]', function (event) {
     event.preventDefault();
@@ -34,12 +44,26 @@ $(".video-box").hover(
 );
 
 $(".video-box").click(function() {
+  loadContent(this.id);
   openTheater();
 });
 
 $(".outer").click(function() {
   closeTheater();
 })
+
+function loadContent(contentID) {
+  var filmContent = theaterContent[contentID];
+  var aboutTitle = "About the creator";
+  if (filmContent["multiple-creators"]) {
+    aboutTitle += "s";
+  }
+  $(".theater.title").text(filmContent["title"]);
+  $(".theater.creator").text(filmContent["creator"]);
+  $(".theater.description").text(filmContent["description"]);
+  $(".theater.about").text(aboutTitle);
+  $(".theater.bio").text(filmContent["bio"]);
+}
 
 function openTheater() {
   document.getElementById("theater").style.display = "block";
@@ -53,7 +77,6 @@ function closeTheater() {
 function parallax() {
 	var wScroll = $(window).scrollTop();
   var topGallery = $('#video-gallery').offset().top;
-  console.log(topGallery);
 	$('.down-indicator').css('opacity', (100 - (wScroll)) + '%');
 	$('.parallax-bg').css('background-position', 'center ' + (5 + (wScroll * 0.05)) + 'em');
   if (wScroll >= topGallery) {
