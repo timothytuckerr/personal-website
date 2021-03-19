@@ -27,12 +27,12 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #0A4EF2;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #093bb3;
 }
 
 * {
@@ -116,10 +116,12 @@ body {
   position: relative;
   width: 70px;
   cursor: pointer;
+  /*
   left: 7.5em;
   right: 0;
   top: 5em;
   bottom: 0;
+  */
 }
 
 .inner {
