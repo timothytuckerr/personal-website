@@ -4,6 +4,7 @@ $(document).ready(function() {
   $('#main').fadeIn(1500);
   // randomEffect();
   $.getJSON("js/theater-content.json", function(content) {
+    console.log(content);
     saveContent(content);
   });
 });
@@ -53,7 +54,9 @@ $(".outer").click(function() {
 })
 
 function loadContent(contentID) {
+  console.log(contentID);
   var filmContent = theaterContent[contentID];
+  console.log(filmContent);
   $("#theater-content.video-embed").attr('src', filmContent["source"]);
   $(".theater.title").text(filmContent["title"]);
   $(".theater.creator").text(filmContent["creator"]);
