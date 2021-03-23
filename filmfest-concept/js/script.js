@@ -11,7 +11,6 @@ $(document).ready(function() {
 
 function saveContent(content) {
   theaterContent = content;
-  console.log(theaterContent);
 }
 
 $(document).on('click', 'a[href^="#"]', function (event) {
@@ -54,10 +53,8 @@ $(".outer").click(function() {
 })
 
 function loadContent(contentID) {
-  console.log(contentID);
   var filmContent = theaterContent[contentID];
-  console.log(filmContent);
-  $("#theater-content.video-embed").attr('src', filmContent["source"]);
+  $(".video-embed").attr('src', filmContent["source"]);
   $(".theater.title").text(filmContent["title"]);
   $(".theater.creator").text(filmContent["creator"]);
   $(".theater.description").text(filmContent["description"]);
