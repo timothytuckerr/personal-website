@@ -3,6 +3,7 @@ var theaterContent = {};
 $(document).ready(function() {
   $('#main').fadeIn(1500);
   // randomEffect();
+  resizeHeader();
   $.getJSON("theater-content.json", function(content) {
     console.log(content);
     saveContent(content);
@@ -12,6 +13,10 @@ $(document).ready(function() {
 function saveContent(content) {
   theaterContent = content;
 }
+
+$(window).resize(function() {
+  resizeHeader();
+});
 
 $(document).on('click', 'a[href^="#"]', function (event) {
     event.preventDefault();
@@ -52,6 +57,10 @@ $(".outer").click(function() {
   closeTheater();
 })
 
+function resizeHeader() {
+  $(".header").css('height', $(window).height() + 'px');
+}
+
 function loadContent(contentID) {
   var filmContent = theaterContent[contentID];
   $(".video-embed").attr('src', filmContent["source"]);
@@ -74,7 +83,7 @@ function parallax() {
 	var wScroll = $(window).scrollTop();
   var topGallery = $('#video-gallery').offset().top;
 	$('.down-indicator').css('opacity', (100 - (wScroll)) + '%');
-	$('.parallax-bg').css('background-position', 'center ' + (5 + (wScroll * 0.05)) + 'em');
+	$('.parallax-bg').css('background-position', 'center ' + (5 + (wScroll * 0.063)) + 'em');
   if (wScroll >= topGallery) {
     $('.parallax-bg-gallery').css('background-position', 'center ' + (5 + ((wScroll - topGallery) * 0.1)) + 'em');
   }

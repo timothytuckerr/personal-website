@@ -16,16 +16,43 @@
 
 <body id="main" class="parallax-bg-main">
   <div class="bg-logo parallax-bg">
-    <div id="head" class="row spacer"></div>
-    <div class="row down-arrow">
-      <a href="#video-gallery">
-        <img src="img/down_indicator.svg" class="down-indicator filter-match">
-      </a>
+  <div class="header">
+    <div class="header row align-items-center">
+      <div class="col-md-6 d-flex justify-content-end">
+        <img src="img/logo.png" alt="bampfa-logo" class="parallax-bg" style="height: 700px; position: fixed; top: 50px; z-index: 1;">
+      </div>
+      <div class="col-md-6 d-flex justify-content-start">
+        <div class="text-head" style="height: 550px; position: fixed; top: 150px; z-index: 1;">
+          <p class="event-title">LIVE FILM FESTIVAL Q&A</p>
+          <p class="time-date">April 8th @ 7pm PST</p>
+          <p class="event-description">Join us for a live Q&A with the featured filmmakers on Thursday, April 8th at the link below!</p>
+          <a href="#video-gallery">
+            <button><p>Event Live 4/8</p></button>
+          </a>
+          <br><br><br>
+          <div class="icons">
+            <a href="http://www.facebook.com/bampfasc" target="_blank" class="facebook">
+              <img src="img/facebook.png" alt="BAMPFA Facebook">
+            </a>
+            <a href="http://www.instagram.com/bampfasc" target="_blank" class="instagram">
+              <img src="img/instagram.png" alt="BAMPFA Instagram">
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-
+    <div class="down-arrow">
+        <a href="#video-gallery">
+          <img src="img/down_indicator.svg" class="down-indicator filter-match">
+        </a>
+    </div>
+  </div>
+    <!--
+    <div id="head" class="row spacer"></div>
+  -->
     <div id="theater">
       <div id="theater-content" class="row justify-content-start">
-        <div class="col-md-2 justify-content-start">
+        <div class="col-md-2 justify-content-start p-4">
           <div class="outer">
             <div class="inner">
               <label>Back</label>
@@ -33,7 +60,10 @@
           </div>
         </div>
         <div class="col-md-8 p-4">
-          <iframe class="video-embed" src="https://www.youtube.com/embed/watch?v=MprXodxE3Zc" frameborder="0"></iframe>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="video-embed" src="https://www.youtube.com/embed/watch?v=MprXodxE3Zc" frameborder="0"></iframe>
+          </div>
+          <br>
           <p class="theater title"></p>
           <p class="theater creator"></p>
           <p class="theater description"></p>
@@ -129,7 +159,7 @@
             <div id="house-of-little-wings" class="video-box">
               <img src="img/stills/HouseOfLittleWings.jpg" alt="House of Little Wings" class="thumbnail img-fluid">
               <video autoplay muted loop style="display: none; width: auto;" class="img fluid">
-                <source src="clip/HouseOfLittleWings" type="video/mp4">
+                <source src="clip/HouseOfLittleWings.mp4" type="video/mp4">
               </video>
               <p id="title" class="film-title">House of Little Wings</p>
             </div>
@@ -149,7 +179,7 @@
         <div class="row lemon-cake">
           <div class="col-md-4 offset-sm-7">
             <div id="lemon-cake" class="video-box">
-              <img src="img/stills/LemonCake.jpg" alt="Lemon Cake" class="thumbnail">
+              <img src="img/stills/LemonCake.jpg" alt="Lemon Cake" class="thumbnail img-fluid">
               <p id="title" class="film-title">Lemon Cake</p>
             </div>
           </div>
